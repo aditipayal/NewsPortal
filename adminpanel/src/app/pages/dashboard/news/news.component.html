@@ -1,0 +1,26 @@
+<h1> News </h1>
+<table class="table">
+    <tr>
+        <td colspan="6" class=" text-center">
+          <a routerLink="../addnews" class="btn btn-danger">Add News</a>   
+        </td>
+    </tr>
+    <tr>
+        <th>S.no</th>                         
+        <th>Category</th>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Image</th>
+        <th>Created At</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor ="let c of newsData;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{c.cname}}</td>
+        <td>{{c.title}}</td>
+        <td><img src="http://localhost:8899/images/{{c.image}}" width="100px" height="100px"/></td>
+        <td>{{c.created_at|date}}</td>
+        <td><a routerLink="../editnews/{{c._id}}">Edit</a><br>
+         <a href="javascript:void(0)" (click)="delnews(c._id)">Delete</a></td>
+    </tr>
+</table>

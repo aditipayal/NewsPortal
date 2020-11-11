@@ -1,0 +1,27 @@
+<div class="header_area">
+        <div class="logo floatleft"><a href="#"><img src="assets/images/logo.png" alt="" /></a></div>
+        <div class="top_menu floatleft">
+          <ul>
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/about-us">About</a></li>
+            <li><a routerLink="/contact-us">Contact us</a></li>
+            <li><a routerLink-="#">Subscribe</a></li>
+            <li><a routerLink="#">Login</a></li>
+          </ul>
+        </div>
+        <div class="social_plus_search floatright">
+          <div class="social">
+            <ul>
+              <li><a href="#" class="twitter"></a></li>
+              <li><a href="#" class="facebook"></a></li>
+              <li><a href="#" class="feed"></a></li>
+            </ul>
+          </div>
+          <div class="search">
+            <form action="#" method="post" id="search_form">
+              <input type="text" placeholder="Search news"  [(ngModel)] = "ser" name="ser"/>
+              <input type="button" id="searchform" value="search" (click) = "search()"/>
+            </form>
+          </div>
+        </div>
+      </div>

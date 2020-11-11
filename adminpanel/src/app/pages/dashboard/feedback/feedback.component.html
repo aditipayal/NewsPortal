@@ -1,0 +1,17 @@
+<h1>Feedback</h1>
+<table class="table">
+    <tr>
+        <th>Name</th>                         
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Message</th>
+        <th>Created At</th>
+    </tr>
+    <tr *ngFor ="let c of feedData; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.mobile}}</td>
+        <td>{{c.message}}</td>
+    </tr>
+</table>

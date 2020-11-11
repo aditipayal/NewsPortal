@@ -1,0 +1,25 @@
+<h1> Category </h1>
+<table class="table">
+    <tr>
+        <td colspan="6" class=" text-center">
+          <a routerLink="../addcategory" class="btn btn-danger">Add Category</a>   
+        </td>
+    </tr>
+    <tr>
+        <th>S.no</th>
+        <th>Cname</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Created At</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor ="let c of catData;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{c.cname}}</td>
+        <td>{{c.description}}</td>
+        <td><img src="http://localhost:8899/images/{{c.image}}" width="100px" height="100px"/></td>
+        <td>{{c.created_at|date}}</td>
+        <td><a routerLink="../editcategory/{{c._id}}">Edit</a><br>
+         <a href="javascript:void(0)" (click)="delcat(c._id)">Delete</a></td>
+    </tr>
+</table>

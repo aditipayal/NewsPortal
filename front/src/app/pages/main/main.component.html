@@ -1,0 +1,15 @@
+<div class="main_content floatleft">
+  <h1>Latest news</h1> 
+  <div *ngIf= "newsData">
+      <div *ngFor = "let n of newsData">
+          <h3>{{n.title|uppercase}}</h3>
+          <div>
+                <i>{{n.cname}} Published At {{n.created_at|date}}</i><br>
+                  <img src="http://localhost:8899/images/{{n.image}}" width = 400 height = 400>  
+                {{n.title}}<br>
+                <a routerLink = "/newsdetails/{{n._id}}">Read More</a>
+          </div>
+      </div>
+  </div>      
+</div>
+<app-sidebar></app-sidebar>
